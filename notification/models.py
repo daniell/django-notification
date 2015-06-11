@@ -143,7 +143,7 @@ class Notice(models.Model):
     added = models.DateTimeField(_("added"), auto_now_add=True)
     unseen = models.BooleanField(_("unseen"), default=True)
     archived = models.BooleanField(_("archived"), default=False)
-    on_site = models.BooleanField(_("on site"))
+    on_site = models.BooleanField(_("on site"), default=False)
     
     objects = NoticeManager()
     
