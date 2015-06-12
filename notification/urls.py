@@ -1,4 +1,7 @@
-from django.conf.urls.defaults import *
+try:
+    from django.conf.urls.defaults import *
+except ImportError:
+    from django.conf.urls import *
 
 from notification.views import notices, mark_all_seen, feed_for_user, single, notice_settings
 
